@@ -1,10 +1,125 @@
-@import url('https://fonts.googleapis.com/css?family=Merriweather:100,200,300,400,500,600,700|Montserrat:100,200,300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Orbitron:100,200,300,400,500,600,700');
 
+@font-face {
+  font-family: 'Tr2n';
+  src: url('../font/Tr2n.ttf') format('truetype');
+}
 
 body, html {
-    height: 100%;
+    min-height: 100vh;
 }
 
-.container-fluid {
-    overflow: hidden;
+* {
+    box-sizing: border-box;
 }
+
+/*----------------------------------------------------Background Color */
+
+body {
+    margin: 0;
+    background: radial-gradient(#6D6875, #323036);
+
+}
+
+/*----------------------------------------------------General Text */
+
+.page-title {
+    margin-top: 5%;
+    color: #001427;
+    font-family: Tr2n, sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 80px;
+    letter-spacing: 3px;
+    text-shadow: 1.5px 1.5px 1px #A29EA7;
+}
+
+.game-info {
+    color: #001120;
+    font-family: Orbitron, sans-serif;
+    font-size: 50px;
+    padding-top: 20px;
+    letter-spacing: 1px;
+    text-shadow: 1.5px 1.5px 1px #A29EA7;
+    text-align: center;
+}
+
+#time, #flips {
+    font-size: 40px;
+}
+
+/*----------------------------------------------------Game Grid Styling */
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 5px;
+    margin: 50px;
+    justify-content: center;
+
+
+}
+
+/*----------------------------------------------------Cards Styling */
+
+.card {
+    height: 175px;
+    width: 233px;
+    position: relative;
+    border-radius: 12px;
+    box-shadow: 2px 2px 2px rgba(50, 50, 50, 50);
+    -webkit-box-shadow: 2px 2px 12x rgba(50, 50, 50, 50);
+    -moz-box-shadow: 2px 2px 2px rgba(50, 50, 50, 50);
+
+}
+
+img {
+    height: 175px;
+    width: 233px;
+    border-radius: 12px;
+    border: 1px solid #A29EA7;
+}
+
+.card-style {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+}
+
+.face-up {
+    transform: rotateX(180deg);
+}
+
+/*----------------------------------------------------Visible class */
+/* needed, java script will add and remove the class as required */
+
+.card.visible .face-down {
+    transform: rotateY(-180deg);
+}
+
+.card.visible .face-up {
+    transform: rotateY(0);
+}
+
+/* the below code was referenced from  https://codepen.io/nxworld/pen/ZYNOBZ
+I have used it to achieve unique hover effect and changed parameters accordingly. */
+
+
+.back-hover img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+
+}
+
+.back-hover img:hover {
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+}
+
+/* end of tutorial code */
