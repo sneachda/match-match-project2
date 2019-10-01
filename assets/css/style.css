@@ -57,27 +57,23 @@ body {
     margin: 50px;
     justify-content: center;
 
-
 }
 
 /*----------------------------------------------------Cards Styling */
 
-.card {
+.card, img{
     height: 175px;
     width: 233px;
     position: relative;
     border-radius: 12px;
-    box-shadow: 2px 2px 2px rgba(50, 50, 50, 50);
-    -webkit-box-shadow: 2px 2px 12x rgba(50, 50, 50, 50);
-    -moz-box-shadow: 2px 2px 2px rgba(50, 50, 50, 50);
-
+    border: 1px solid #A29EA7;
+    box-shadow: 2px 2px 10px rgba(0,20,39, .7);
 }
 
-img {
-    height: 175px;
-    width: 233px;
-    border-radius: 12px;
-    border: 1px solid #A29EA7;
+.card {
+    perspective: 0.7s;
+    background-color: transparent;
+
 }
 
 .card-style {
@@ -88,20 +84,23 @@ img {
     justify-content: center;
     align-items: center;
     backface-visibility: hidden;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+
 }
 
 .face-up {
-    transform: rotateX(180deg);
+    transform: rotateY(180deg);
 }
+
 
 /*----------------------------------------------------Visible class */
-/* needed, java script will add and remove the class as required */
+/* needed, java script will add and remove class as required */
 
-.card.visible .face-down {
-    transform: rotateY(-180deg);
+.card:hover .face-down {
+    transform: rotateY(180deg);
 }
-
-.card.visible .face-up {
+.card:hover .face-up {
     transform: rotateY(0);
 }
 
