@@ -5,7 +5,7 @@
   src: url('../font/Tr2n.ttf') format('truetype');
 }
 
-body, html {
+html {
     min-height: 100vh;
 }
 
@@ -25,13 +25,6 @@ body {
 
 .page-title {
     margin-top: 5%;
-    color: #001427;
-    font-family: Tr2n, sans-serif;
-    font-weight: 700;
-    text-align: center;
-    font-size: 75px;
-    letter-spacing: 3px;
-    text-shadow: 1.5px 1.5px 1px #A29EA7;
 	line-height: 80px;
 	padding: 10px 10px 10px 34%;
 	box-shadow:
@@ -39,8 +32,19 @@ body {
 		inset 0 0 5px rgba(0,20,39, .7),
 		inset -285px 0 60px #323036;
 	border-radius: 12px;
-	background:  url(../images/16.jpg) no-repeat left;
+	background:  url("../images/16.jpg") no-repeat left;
 }
+
+.front-page, h1 {
+    color: #001427;
+    font-family: Tr2n, sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 75px;
+    letter-spacing: 3px;
+    text-shadow: 1.5px 1.5px 1px #A29EA7;
+}
+
 
 .game-info {
     color: #001120;
@@ -54,6 +58,43 @@ body {
 
 #time, #flips {
     font-size: 40px;
+}
+
+/*----------------------------------------------------Front Overlay Page */
+
+.front-page {
+    display: none;
+    position: fixed;
+    color: #323036;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.front-page.visible {
+    display: flex;
+    animation: grow 0.7s forwards;
+    flex-direction: column;
+}
+
+@keyframes grow {
+    from {
+        background-color: rgba(0,0,0, 0);
+        font-size: 0;
+    }
+    to {
+        background-color: rgba(0,0,0, .8);
+        font-size: 80px;
+    }
+}
+
+.front-page-small {
+    font-size: 30px;
 }
 
 /*----------------------------------------------------Game Grid Styling */
@@ -136,4 +177,10 @@ I have used it to achieve unique hover effect and changed parameters accordingly
 }
 
 /* end of tutorial code */
+
+@media (max-width: 600px) {
+    .game-container {
+        grid-template-columns: repeat(2,auto);
+    }
+}
 
