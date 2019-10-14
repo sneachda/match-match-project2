@@ -18,6 +18,10 @@ let flippedCard = false;
 let firstCard, secondCard;
 let lockBoard = false;
 
+//variables needed to start clock countdown
+let totalTime = 60;
+let timer = document.getElementById('time');
+
 //variables needed to start counting flips
 let totalClicks = 0;
 let ticker = document.getElementById('flips');
@@ -95,11 +99,11 @@ function disabledCards(){
             matchSound.play();
             matchedCards.push(firstCard);
             matchedCards.push(secondCard);
-
+            //each matched card is sent to matchedCards array
             if (matchedCards.length === 16)
                 victory();
-            //when all 16 cards are and matched and sent to matchedCards array,
-            //means player has won
+            //when all 16 cards are flipped and matched, player has won
+
 
 }
 
@@ -125,6 +129,7 @@ function startGame(){
 
 
 function hideCards() {
+    //hides all cards when restarting the game
     cards.forEach (card => {
         card.classList.remove('flip');
     });
@@ -132,9 +137,7 @@ function hideCards() {
 }
 
 
-//variables needed to start clock countdown
-let totalTime = 60;
-let timer = document.getElementById('time');
+
 
 function startClock(){
 //timer countdown function
@@ -173,7 +176,7 @@ function shuffle(){
 }
 
 
-//modal SCORE, based on knowledge from w3schools
+//modal instructions, based on knowledge from w3schools
 
 let modal = document.getElementById("myModal");
 let btn = document.getElementById("myBtn");

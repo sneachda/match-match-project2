@@ -62,8 +62,10 @@ body {
     font-size: 35px;
 }
 
-.time {
-
+#finalFlips {
+    color: #ffffff;
+    text-shadow: 1.5px 1.5px 1px #A29EA7;
+    font-family: Orbitron, sans-serif;
 }
 
 /*----------------------------------------------------Front Overlay Page
@@ -183,16 +185,7 @@ I have used it to achieve unique hover effect and changed parameters accordingly
 
 /* end of tutorial code */
 
-@media (max-width: 600px) {
-    .game-container {
-        grid-template-columns: repeat(2, auto);
-    }
 
-    .time {
-        padding-right: 0;
-    }
-
-}
 
 /*----------------------------------------------------Modal */
 
@@ -212,7 +205,7 @@ I have used it to achieve unique hover effect and changed parameters accordingly
   padding: 10px;
   border: 1px solid #001427;
     border-radius: 12px;
-  width: 60%; /* Could be more or less, depending on screen size */
+  width: 60%;
 
     color: #ffffff;
     font-family: sans-serif;
@@ -279,5 +272,18 @@ I have used it to achieve unique hover effect and changed parameters accordingly
 
 .footer-year {
     padding: 0;
-    font-family: "Montserrat", sans-serif;
+    font-family: Orbitron, sans-serif;
+}
+
+/*----------------------------------------------------Media Queries */
+
+@media (max-width: 600px) {
+    .game-container {
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .time {
+        padding-right: 0;
+    }
+
 }
