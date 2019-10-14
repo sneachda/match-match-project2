@@ -160,6 +160,7 @@ function victory() {
       winSound.play();
        bgMusic.pause();
        document.getElementById('victory').classList.add('visible');
+       document.getElementById("finalFlips").innerHTML = totalClicks;
 }
 
 function shuffle(){
