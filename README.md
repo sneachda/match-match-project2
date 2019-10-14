@@ -72,7 +72,7 @@ The site was developed using PyCharm. Using version control in PyCharm I was abl
 
 **To create a local repository please follow those steps:**
 
-1. Go to [Github Project Repository](http://https://github.com/sneachda/memory-game-ms2 "Github Project Repository")
+1. Go to [Github Project Repository](https://github.com/sneachda/memory-game-ms2 "Github Project Repository")
 2. Under the repository name click Clone or download
 3. In the 'Clone with HTTPs section' clone URL for the repository.
 4. Open Git Bash in your local platform.
