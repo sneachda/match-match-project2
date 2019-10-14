@@ -64,7 +64,7 @@ The site was developed using PyCharm. Using version control in PyCharm I was abl
 
 **Those steps were taking in order to deploy my page from GitHub repository:**
 
-1. On Github navigate to [sneachda/memory-game-ms2](http://https://github.com/sneachda/memory-game-ms2 "sneachda/memory-game-ms2")
+1. On Github navigate to [sneachda/memory-game-ms2](https://github.com/sneachda/memory-game-ms2 "sneachda/memory-game-ms2")
 2.  From the menu at the top click on settings
 3.  Scroll down to the GitHub pages section
 4. Under Source section click on dropdown menu and select Master Branch as your GitHub pages publishing source.
