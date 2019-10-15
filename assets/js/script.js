@@ -25,7 +25,7 @@ let timer = document.getElementById('time');
 //variables needed to start counting flips
 let totalClicks = 0;
 let ticker = document.getElementById('flips');
-
+let countdown;
 
 //event listener added to all three overlays - when clicked game page appears and it starts
 let overlays = Array.from(document.getElementsByClassName('front-page'));
@@ -42,8 +42,9 @@ overlays.forEach(overlay => {
 function restartGame() {
 //restart game function only called when called from overlay pages
 //all parameters are cleared
-    hideCards();
+
     shuffle();
+    hideCards();
     bgMusic.play();
     totalClicks = 0;
     ticker.innerText = totalClicks;
@@ -51,9 +52,10 @@ function restartGame() {
     timer.innerText = totalTime;
     countdown = setInterval(startClock, 1000);
     cards.forEach (card => {
-        card.addEventListener('click', flipCard)
+        card.addEventListener('click', flipCard);
     });
 }
+
 
 
 function flipCard() {
@@ -133,9 +135,7 @@ function hideCards() {
     cards.forEach (card => {
         card.classList.remove('flip');
     });
-
 }
-
 
 
 
