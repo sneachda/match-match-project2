@@ -2,7 +2,7 @@
 let bgMusic = new Audio('assets/audio/bgmusic.mp3');
 bgMusic.volume = 0.1;
 bgMusic.loop = true;
-let flipSound = new Audio ('assets/audio/flip.wav');
+let flipSound = new Audio('assets/audio/flip.wav');
 flipSound.volume = 0.3;
 let matchSound = new Audio('Assets/Audio/match.wav');
 matchSound.volume = 0.2;
@@ -21,21 +21,20 @@ let lockBoard = false;
 //variables needed to start clock countdown
 let totalTime = 60;
 let timer = document.getElementById('time');
+let countdown;
 
 //variables needed to start counting flips
 let totalClicks = 0;
 let ticker = document.getElementById('flips');
-let countdown;
 
 //event listener added to all three overlays - when clicked game page appears and it starts
 let overlays = Array.from(document.getElementsByClassName('front-page'));
 overlays.forEach(overlay => {
-        overlay.addEventListener('click', () => {
-            overlay.classList.remove('visible');
-            restartGame();
-
-        });
+    overlay.addEventListener('click', () => {
+        overlay.classList.remove('visible');
+        restartGame();
     });
+});
 
 //functions
 
@@ -51,12 +50,10 @@ function restartGame() {
     totalTime = 60;
     timer.innerText = totalTime;
     countdown = setInterval(startClock, 1000);
-    cards.forEach (card => {
+    cards.forEach(card => {
         card.addEventListener('click', flipCard);
     });
 }
-
-
 
 function flipCard() {
     if (lockBoard) return;
@@ -79,126 +76,115 @@ function flipCard() {
         secondCard = this;
 
         checkIfMatch();
-        }
+    }
 }
-
 
 function checkIfMatch() {
 //match?
-        if (firstCard.dataset.name ===
+    if (firstCard.dataset.name ===
         secondCard.dataset.name) {
-            //match!
-            disabledCards();
+        //match!
+        disabledCards();
 
-        } else {
-            unflipCards();
-        }
+    } else {
+        unflipCards();
+    }
 }
 
-function disabledCards(){
-            firstCard.removeEventListener('click', flipCard);
-            secondCard.removeEventListener('click', flipCard);
-            matchSound.play();
-            matchedCards.push(firstCard);
-            matchedCards.push(secondCard);
-            //each matched card is sent to matchedCards array
-            if (matchedCards.length === 16)
-                victory();
-            //when all 16 cards are flipped and matched, player has won
-
-
+function disabledCards() {
+    firstCard.removeEventListener('click', flipCard);
+    secondCard.removeEventListener('click', flipCard);
+    matchSound.play();
+    matchedCards.push(firstCard);
+    matchedCards.push(secondCard);
+    //each matched card is sent to matchedCards array
+    if (matchedCards.length === 16)
+        victory();
+    //when all 16 cards are flipped and matched, player has won
 }
 
-function unflipCards(){
+function unflipCards() {
     //not a match
     lockBoard = true;
-            setTimeout(() => {
-                firstCard.classList.remove('flip');
-                secondCard.classList.remove('flip');
+    setTimeout(() => {
+        firstCard.classList.remove('flip');
+        secondCard.classList.remove('flip');
 
-                startGame();
-                //cards are not matched, startGame function is called
+        startGame();
+        //cards are not matched, startGame function is called
 
-            }, 1000);
+    }, 1000);
 }
 
-
-function startGame(){
-    [FlippedCard, lockBoard] = [false,false];
-    [firstCard, secondCard] = [null,null];
+function startGame() {
+    [FlippedCard, lockBoard] = [false, false];
+    [firstCard, secondCard] = [null, null];
 }
-
-
 
 function hideCards() {
     //hides all cards when restarting the game
-    cards.forEach (card => {
+    cards.forEach(card => {
         card.classList.remove('flip');
     });
 }
 
-
-
-function startClock(){
+function startClock() {
 //timer countdown function
-        totalTime--;
-        timer.innerText = totalTime;
-        if(totalTime <= 0)
-               gameOver();
-        //if cards not matched within 60 seconds,
-        //gameOver function is called
+    totalTime--;
+    timer.innerText = totalTime;
+    if (totalTime <= 0)
+        gameOver();
+    //if cards not matched within 60 seconds,
+    //gameOver function is called
 }
 
-
- function gameOver() {
-      gameOverSound.play();
-      clearInterval(countdown);
-       bgMusic.pause();
-       document.getElementById('game-over').classList.add('visible');
-   }
-
+function gameOver() {
+    gameOverSound.play();
+    clearInterval(countdown);
+    bgMusic.pause();
+    document.getElementById('game-over').classList.add('visible');
+}
 
 function victory() {
     clearInterval(countdown);
-      winSound.play();
-       bgMusic.pause();
-       document.getElementById('victory').classList.add('visible');
-       document.getElementById("finalFlips").innerHTML = totalClicks;
+    winSound.play();
+    bgMusic.pause();
+    document.getElementById('victory').classList.add('visible');
+    document.getElementById("finalFlips").innerHTML = totalClicks;
 }
 
-function shuffle(){
+function shuffle() {
 //function called with each reload of the page
 //shuffle the deck into random positions
     cards.forEach(card => {
-        let random = Math.floor(Math.random() *16);
+        let random = Math.floor(Math.random() * 16);
         card.style.order = random;
     });
 }
 
-
-//modal instructions, based on knowledge from w3schools
+//MODAL instructions, based on knowledge from w3schools
 
 let modal = document.getElementById("myModal");
 let btn = document.getElementById("myBtn");
 let span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
-  clearInterval(countdown);
+btn.onclick = function () {
+    modal.style.display = "block";
+    clearInterval(countdown);
 };
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-  countdown = setInterval(startClock, 1000);
+span.onclick = function () {
+    modal.style.display = "none";
+    countdown = setInterval(startClock, 1000);
 };
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target === modal) {
-    modal.style.display = "none";
-    countdown = setInterval(startClock, 1000);;
-  }
+window.onclick = function (event) {
+    if (event.target === modal) {
+        modal.style.display = "none";
+        countdown = setInterval(startClock, 1000);
+    }
 };
 

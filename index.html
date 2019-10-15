@@ -9,7 +9,7 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
           type="text/css"/>
     <link href="assets/css/style.css" rel="stylesheet" type="text/css"/>
-    <script src="assets/js/script.js" async></script>
+    <script src="assets/js/script.js"></script>
     <!-- favicon, courtesy to mmtuts: https://www.youtube.com/watch?v=kEf1xSwX5D8 -->
     <link rel="shortcut icon" type="image/jpg" href="assets/images/favicon.png">
     <title>Match-Match</title>
@@ -28,32 +28,27 @@
 
 <!-- Overlays -->
 
-
-        <div class="front-page visible">click to START
-
-        </div>
-        <div id="game-over" class="front-page">GAME OVER
-            <span class="front-page-small">click to restart</span>
-        </div>
-         <div id="victory" class="front-page">VICTORY
-            <span class="front-page-small">
+<section>
+    <div class="front-page visible">click to START</div>
+    <div id="game-over" class="front-page">GAME OVER
+        <span class="front-page-small">click to restart</span>
+    </div>
+    <div id="victory" class="front-page">VICTORY
+        <span class="front-page-small">
                 You flipped cards <span id="finalFlips"></span> times! <br>
                 click to restart
-            </span>
-        </div>
-        <div id="myModal" class="modal">
-            <div class="modal-content">
-             <span class="close">&times;</span>
-               <p class="front-page-small">
+        </span>
+    </div>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p class="front-page-small">
                 You have 60 seconds to match all pairs. Each attempt, right or wrong, will be counted and will set
-            your final score. The game ends after the player matches all pairs or the time is up.
+                your final score. The game ends after the player matches all pairs or the time is up.
             </p>
-  </div>
-
         </div>
-
-
-
+    </div>
+</section>
 
 <!-- Game Information -->
 
@@ -204,8 +199,10 @@
     </div>
 </div>
 
+<!-- Footer -->
+
 <footer>
- <div class="container-fluid container-footer">
+    <div class="container-fluid container-footer">
         <div class="row">
             <div class="col-sm-12">
                 <ul class="list-inline social-links-footer">
@@ -233,7 +230,7 @@
 
 </footer>
 
-
+<!-- Scripts -->
 
 <script crossorigin="anonymous" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>

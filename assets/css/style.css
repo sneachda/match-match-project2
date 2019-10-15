@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Orbitron:100,200,300,400,500,600,700');
 
 @font-face {
-  font-family: 'Tr2n';
-  src: url('../font/Tr2n.ttf') format('truetype');
+    font-family: 'Tr2n';
+    src: url('../font/Tr2n.ttf') format('truetype');
 }
 
 html {
@@ -18,21 +18,19 @@ html {
 body {
     margin: 0;
     background: radial-gradient(#6D6875, #323036);
-
 }
 
 /*----------------------------------------------------General Text */
 
 .page-title {
     margin-top: 5%;
-	line-height: 65px;
-	padding: 5px 5px 5px 25%;
-	box-shadow:
-		inset 0 0 0 1px rgba(0,20,39, .7),
-		inset 0 0 10px rgba(0,20,39, .7),
-		inset -285px 0 60px #323036;
-	border-radius: 12px;
-	background:  url("../images/9.jpg") no-repeat left;
+    line-height: 65px;
+    padding: 5px 5px 5px 25%;
+    box-shadow: inset 0 0 0 1px rgba(0, 20, 39, .7),
+    inset 0 0 10px rgba(0, 20, 39, .7),
+    inset -285px 0 60px #323036;
+    border-radius: 12px;
+    background: url("../images/9.jpg") no-repeat left;
     justify-content: center;
 }
 
@@ -46,7 +44,6 @@ body {
     text-shadow: 1.5px 1.5px 1px #A29EA7;
 }
 
-
 .game-info, .btn-custom {
     color: #001120;
     font-family: Orbitron, sans-serif;
@@ -55,7 +52,6 @@ body {
     letter-spacing: 1px;
     text-shadow: 1.5px 1.5px 1px #A29EA7;
     text-align: center;
-
 }
 
 #time, #flips {
@@ -70,7 +66,6 @@ body {
 
 /*----------------------------------------------------Front Overlay Page
 inspired by https://www.w3schools.com/howto/howto_css_overlay.asp */
-
 
 .front-page {
     display: none;
@@ -94,11 +89,11 @@ inspired by https://www.w3schools.com/howto/howto_css_overlay.asp */
 
 @keyframes grow {
     from {
-        background-color: rgba(0,0,0, 0);
+        background-color: rgba(0, 0, 0, 0);
         font-size: 0;
     }
     to {
-        background-color: rgba(0,0,0, .8);
+        background-color: rgba(0, 0, 0, .8);
         font-size: 80px;
     }
 }
@@ -106,7 +101,6 @@ inspired by https://www.w3schools.com/howto/howto_css_overlay.asp */
 .front-page-small {
     font-size: 30px;
 }
-
 
 /*----------------------------------------------------Game Grid Styling */
 
@@ -117,12 +111,11 @@ inspired by https://www.w3schools.com/howto/howto_css_overlay.asp */
     margin: 50px;
     justify-content: center;
     perspective: 1000px;
-
 }
 
 /*----------------------------------------------------Cards Styling */
 
-.memory-card, img{
+.memory-card, img {
     height: 94px;
     width: 125px;
 }
@@ -149,7 +142,6 @@ img {
     transform: rotateY(180deg);
 }
 
-
 .face-up,
 .face-down {
     position: absolute;
@@ -165,47 +157,42 @@ img {
     transform: rotateY(180deg);
 }
 
-
 /* the below code was referenced from  https://codepen.io/nxworld/pen/ZYNOBZ
 I have used it to achieve unique hover effect and changed parameters accordingly. */
-
 
 .back-hover img {
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
     -webkit-transition: .2s ease-in-out;
     transition: .2s ease-in-out;
-
 }
 
 .back-hover img:hover {
-   -webkit-filter: grayscale(0);
-   filter: grayscale(0);
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
 }
 
 /* end of tutorial code */
 
-
-
 /*----------------------------------------------------Modal */
 
 .modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .modal-content {
-    background-color: rgba(20,19,21, .8);
-  margin: 10% auto;
-  padding: 10px;
-  border: 1px solid #001427;
+    background-color: rgba(20, 19, 21, .8);
+    margin: 10% auto;
+    padding: 10px;
+    border: 1px solid #001427;
     border-radius: 12px;
-  width: 60%;
+    width: 60%;
 
     color: #ffffff;
     font-family: sans-serif;
@@ -217,25 +204,24 @@ I have used it to achieve unique hover effect and changed parameters accordingly
 }
 
 .close {
-  color: #6D6875;
-  font-size: 20px;
-  font-weight: 500;
+    color: #6D6875;
+    font-size: 20px;
+    font-weight: 500;
     text-align: right;
 }
 
 .close:hover,
 .close:focus {
-  color: #6D6875;
-  text-decoration: none;
-  cursor: pointer;
+    color: #6D6875;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .btn-custom {
-    box-shadow:
-		inset 0 0 0 1px rgba(0,20,39, .7),
-		inset 0 0 1px rgba(0,20,39, .7),
-		inset -80px 0 60px #323036;
-	border-radius: 12px;
+    box-shadow: inset 0 0 0 1px rgba(0, 20, 39, .7),
+    inset 0 0 1px rgba(0, 20, 39, .7),
+    inset -80px 0 60px #323036;
+    border-radius: 12px;
     text-align: center;
     padding: 10px;
 }
@@ -285,5 +271,4 @@ I have used it to achieve unique hover effect and changed parameters accordingly
     .time {
         padding-right: 0;
     }
-
 }
