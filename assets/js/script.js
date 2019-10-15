@@ -21,6 +21,8 @@ let lockBoard = false;
 //variables needed to start clock countdown
 let totalTime = 60;
 let timer = document.getElementById('time');
+let minute = 60;
+let timeLeft = document.getElementById('finalTime');
 
 //variables needed to start counting flips
 let totalClicks = 0;
@@ -137,6 +139,10 @@ function startClock() {
     //gameOver function is called
 }
 
+function howFast() {
+    timeLeft = minute - totalTime;
+}
+
 function gameOver() {
     gameOverSound.play();
     clearInterval(countdown);
@@ -145,11 +151,13 @@ function gameOver() {
 }
 
 function victory() {
+    howFast();
     clearInterval(countdown);
     winSound.play();
     bgMusic.pause();
     document.getElementById('victory').classList.add('visible');
     document.getElementById("finalFlips").innerHTML = totalClicks;
+    document.getElementById('finalTime').innerHTML = timeLeft;
 }
 
 function shuffle() {
