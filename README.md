@@ -81,7 +81,7 @@ The following was used to create the website:
 HTML, CSS & Javascript ~ main languages used to create this single-page application game.
 
 [PyCharm](http://https://www.jetbrains.com/pycharm/ "PyCharm") - coding platform that was used for the coding and storing a local repository.
-[GitHub]() - this project uses GitHub to store and share all project code remotely. GitHub Pages is used to hosting the project live demo.
+[GitHub](https://github.com/) - this project uses GitHub to store and share all project code remotely. GitHub Pages is used to hosting the project live demo.
 
 [Bootstrap](http://https://www.bootstrapcdn.com/ "Bootstrap") - used to simplify the structure and to make it responsive.
 
@@ -106,15 +106,11 @@ The code has been validated using:
 
 [JSHint](https://jshint.com "JSHint")
 
-This site has met the objective of creating online presence with minimalistic design and content, but providing enough information and platform to enable fast contact.
+This site has met the objective of creating online presence with minimalistic design and content. It has been tested and updated as different bugs were founded a long the way. 
 
 All links included on this website have target=_blank attribute added, which means they will open in a new tab. That permits users to simply get back where they were within my page. All links have been manually tested to make sure they are linked to correct destination.
 
 The website has been tested across multiple browsers (Chrome, Safari, FireFox) and across different screen sizes (Galaxy C5, various iPhones, Huawei, iPad, iPad Pro and laptops) to make sure is responsive. Bootstrap and CCS Grid has been used to achieve this.
-
-On bigger screens (min 992px and up) you will be able to see 
-
-Sections have 4 columns, displayed next to each other, but on smaller screens it changes to 2 on top of 2.
 
 All fonts, images and other attributes have been changed accordingly to fit different screen sizes. Media queries have been used to make them work.
 
@@ -142,20 +138,22 @@ The site was developed using PyCharm. Using version control in PyCharm I was abl
 6. Type git clone, and then paste the URL copied earlier: git clone https://github.com/sneachda/memory-game-ms2.git
 7. - After pressing ENTER your local clone will be created.
 
+**CREDITS**
+*Content*
 
-**MEDIA**
+All text in this project was written by the developer.
+
+*MEDIA*
 
 All pictures included in this project have been taken from official NASA website: https://solarsystem.nasa.gov/planets/overview/
 
 Audio has been downloaded from open saurce pages. 
 Background music has been purchased from http://bandcamp.com : Tannhauser Gate, digital track by Aleks Michalski
 
+*Code*
+Code for flip Card animation and some functionalities like match cards, resettable, flip and unflip cards, disable and shuffle cards was learned, based and adapted from this video on [FreecodeCamp](https://www.youtube.com/watch?v=ZniVgo8U7ek)
 
 **ACKNOWLEDGMENTS**
-
-The ....... inspired the layout.
-
-I have based my hover effect over images in project section on code I came across on CodePen
 
 Special thanks to all students active on Slack for their support and to Maranatha Ilesanmi - my course mentor, for all the useful tips :)
 
