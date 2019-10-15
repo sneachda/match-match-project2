@@ -2,202 +2,206 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
           type="text/css"/>
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
           type="text/css"/>
     <link href="assets/css/style.css" rel="stylesheet" type="text/css"/>
-    <script src="assets/js/script.js"></script>
+    <script async src="assets/js/script.js"></script>
     <!-- favicon, courtesy to mmtuts: https://www.youtube.com/watch?v=kEf1xSwX5D8 -->
-    <link rel="shortcut icon" type="image/jpg" href="assets/images/favicon.png">
+    <link href="assets/images/favicon.png" rel="shortcut icon" type="image/jpg">
     <title>Match-Match</title>
 </head>
 <body>
 
 <!-- Page Title -->
 
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-12 col-sm-6">
-            <h1 class="page-title">Match-Match</h1>
-        </div>
-    </div>
-</div>
-
-<!-- Overlays -->
-
 <section>
-    <div class="front-page visible">click to START</div>
-    <div id="game-over" class="front-page">GAME OVER
-        <span class="front-page-small">click to restart</span>
-    </div>
-    <div id="victory" class="front-page">VICTORY
-        <span class="front-page-small">
-                You flipped cards <span id="finalFlips"></span> times! <br>
-                click to restart
-        </span>
-    </div>
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <p class="front-page-small">
-                You have 60 seconds to match all pairs. Each attempt, right or wrong, will be counted and will set
-                your final score. The game ends after the player matches all pairs or the time is up.
-            </p>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-6">
+                <h1 class="page-title">Match-Match</h1>
+            </div>
         </div>
     </div>
 </section>
 
+<!-- Overlays -->
+
+<div class="front-page visible">click to START</div>
+<div class="front-page" id="game-over">GAME OVER
+    <span class="front-page-small">click to restart</span>
+</div>
+<div class="front-page" id="victory">VICTORY
+    <span class="front-page-small">
+                You flipped cards <span id="finalFlips"></span> times! <br>
+                click to restart
+            </span>
+</div>
+<div class="modal" id="myModal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p class="front-page-small">
+            You have 60 seconds to match all pairs. Each attempt, right or wrong, will be counted and will set
+            your final score. The game ends after the player matches all pairs or the time is up.
+        </p>
+    </div>
+</div>
+
+
 <!-- Game Information -->
 
-<div class="container">
-    <div class="row justify-content-center game-info">
-        <div class="col-12 col-sm-4 time">
-            Time <span id="time">60</span>
-        </div>
-        <div class="col-6 col-sm-4 flips">
-            Flips <span id="flips">0</span>
-        </div>
-        <div class="col-12 col-sm-6">
-            <button id="myBtn" class="btn btn-custom">rules</button>
+<section>
+    <div class="container">
+        <div class="row justify-content-center game-info">
+            <div class="col-12 col-sm-4 time">
+                Time <span id="time">60</span>
+            </div>
+            <div class="col-6 col-sm-4 flips">
+                Flips <span id="flips">0</span>
+            </div>
+            <div class="col-12 col-sm-6">
+                <button class="btn btn-custom" id="myBtn">rules</button>
+            </div>
         </div>
     </div>
-</div>
+</section>
 
 <!-- Game Container -->
-
-<div class="game-container">
-    <div class="memory-card" data-name="1">
-        <div class="face-down back-hover">
-            <img src="assets/images/back.jpg" alt="backdrop">
+<section>
+    <div class="game-container">
+        <div class="memory-card" data-name="1">
+            <div class="face-down back-hover">
+                <img alt="backdrop" src="assets/images/back.jpg">
+            </div>
+            <div class="face-up">
+                <img alt="mercury" class='card-value' src="assets/images/1.jpg">
+            </div>
         </div>
-        <div class="face-up">
-            <img class='card-value' src="assets/images/1.jpg" alt="mercury">
+        <div class="memory-card" data-name="2">
+            <div class="face-down back-hover">
+                <img alt="backdrop" src="assets/images/back.jpg">
+            </div>
+            <div class="face-up">
+                <img alt="venus" class='card-value' src="assets/images/2.jpg">
+            </div>
+        </div>
+        <div class="memory-card" data-name="3">
+            <div class="face-down back-hover">
+                <img alt="backdrop" src="assets/images/back.jpg">
+            </div>
+            <div class="face-up">
+                <img alt="earth" class='card-value' src="assets/images/3.jpg">
+            </div>
+        </div>
+        <div class="memory-card" data-name="4">
+            <div class="face-down back-hover">
+                <img alt="backdrop" src="assets/images/back.jpg">
+            </div>
+            <div class="face-up">
+                <img alt="mars" class='card-value' src="assets/images/4.jpg">
+            </div>
+        </div>
+        <div class="memory-card" data-name="5">
+            <div class="face-down back-hover">
+                <img alt="backdrop" src="assets/images/back.jpg">
+            </div>
+            <div class="face-up">
+                <img alt="jupiter" class='card-value' src="assets/images/5.jpg">
+            </div>
+        </div>
+        <div class="memory-card" data-name="6">
+            <div class="face-down back-hover">
+                <img alt="backdrop" src="assets/images/back.jpg">
+            </div>
+            <div class="face-up">
+                <img alt="saturn" class='card-value' src="assets/images/6.jpg">
+            </div>
+        </div>
+        <div class="memory-card" data-name="7">
+            <div class="face-down back-hover">
+                <img alt="backdrop" src="assets/images/back.jpg">
+            </div>
+            <div class="face-up">
+                <img alt="uranus" class='card-value' src="assets/images/7.jpg">
+            </div>
+        </div>
+        <div class="memory-card" data-name="8">
+            <div class="face-down back-hover">
+                <img alt="backdrop" src="assets/images/back.jpg">
+            </div>
+            <div class="face-up">
+                <img alt="neptune" class='card-value' src="assets/images/8.jpg">
+            </div>
+        </div>
+        <div class="memory-card" data-name="1">
+            <div class="face-down back-hover">
+                <img alt="backdrop" src="assets/images/back.jpg">
+            </div>
+            <div class="face-up">
+                <img alt="mercury" class='card-value' src="assets/images/1.jpg">
+            </div>
+        </div>
+        <div class="memory-card" data-name="2">
+            <div class="face-down back-hover">
+                <img alt="backdrop" src="assets/images/back.jpg">
+            </div>
+            <div class="face-up">
+                <img alt="venus" class='card-value' src="assets/images/2.jpg">
+            </div>
+        </div>
+        <div class="memory-card" data-name="3">
+            <div class="face-down back-hover">
+                <img alt="backdrop" src="assets/images/back.jpg">
+            </div>
+            <div class="face-up">
+                <img alt="earth" class='card-value' src="assets/images/3.jpg">
+            </div>
+        </div>
+        <div class="memory-card" data-name="4">
+            <div class="face-down back-hover">
+                <img alt="backdrop" src="assets/images/back.jpg">
+            </div>
+            <div class="face-up">
+                <img alt="mars" class='card-value' src="assets/images/4.jpg">
+            </div>
+        </div>
+        <div class="memory-card" data-name="5">
+            <div class="face-down back-hover">
+                <img alt="backdrop" src="assets/images/back.jpg">
+            </div>
+            <div class="face-up">
+                <img alt="jupiter" class='card-value' src="assets/images/5.jpg">
+            </div>
+        </div>
+        <div class="memory-card" data-name="6">
+            <div class="face-down back-hover">
+                <img alt="backdrop" src="assets/images/back.jpg">
+            </div>
+            <div class="face-up">
+                <img alt="saturn" class='card-value' src="assets/images/6.jpg">
+            </div>
+        </div>
+        <div class="memory-card" data-name="7">
+            <div class="face-down back-hover">
+                <img alt="backdrop" src="assets/images/back.jpg">
+            </div>
+            <div class="face-up">
+                <img alt="uranus" class='card-value' src="assets/images/7.jpg">
+            </div>
+        </div>
+        <div class="memory-card" data-name="8">
+            <div class="face-down back-hover">
+                <img alt="backdrop" src="assets/images/back.jpg">
+            </div>
+            <div class="face-up">
+                <img alt="neptune" class='card-value' src="assets/images/8.jpg">
+            </div>
         </div>
     </div>
-    <div class="memory-card" data-name="2">
-        <div class="face-down back-hover">
-            <img src="assets/images/back.jpg" alt="backdrop">
-        </div>
-        <div class="face-up">
-            <img class='card-value' src="assets/images/2.jpg" alt="venus">
-        </div>
-    </div>
-    <div class="memory-card" data-name="3">
-        <div class="face-down back-hover">
-            <img src="assets/images/back.jpg" alt="backdrop">
-        </div>
-        <div class="face-up">
-            <img class='card-value' src="assets/images/3.jpg" alt="earth">
-        </div>
-    </div>
-    <div class="memory-card" data-name="4">
-        <div class="face-down back-hover">
-            <img src="assets/images/back.jpg" alt="backdrop">
-        </div>
-        <div class="face-up">
-            <img class='card-value' src="assets/images/4.jpg" alt="mars">
-        </div>
-    </div>
-    <div class="memory-card" data-name="5">
-        <div class="face-down back-hover">
-            <img src="assets/images/back.jpg" alt="backdrop">
-        </div>
-        <div class="face-up">
-            <img class='card-value' src="assets/images/5.jpg" alt="jupiter">
-        </div>
-    </div>
-    <div class="memory-card" data-name="6">
-        <div class="face-down back-hover">
-            <img src="assets/images/back.jpg" alt="backdrop">
-        </div>
-        <div class="face-up">
-            <img class='card-value' src="assets/images/6.jpg" alt="saturn">
-        </div>
-    </div>
-    <div class="memory-card" data-name="7">
-        <div class="face-down back-hover">
-            <img src="assets/images/back.jpg" alt="backdrop">
-        </div>
-        <div class="face-up">
-            <img class='card-value' src="assets/images/7.jpg" alt="uranus">
-        </div>
-    </div>
-    <div class="memory-card" data-name="8">
-        <div class="face-down back-hover">
-            <img src="assets/images/back.jpg" alt="backdrop">
-        </div>
-        <div class="face-up">
-            <img class='card-value' src="assets/images/8.jpg" alt="neptune">
-        </div>
-    </div>
-    <div class="memory-card" data-name="1">
-        <div class="face-down back-hover">
-            <img src="assets/images/back.jpg" alt="backdrop">
-        </div>
-        <div class="face-up">
-            <img class='card-value' src="assets/images/1.jpg" alt="mercury">
-        </div>
-    </div>
-    <div class="memory-card" data-name="2">
-        <div class="face-down back-hover">
-            <img src="assets/images/back.jpg" alt="backdrop">
-        </div>
-        <div class="face-up">
-            <img class='card-value' src="assets/images/2.jpg" alt="venus">
-        </div>
-    </div>
-    <div class="memory-card" data-name="3">
-        <div class="face-down back-hover">
-            <img src="assets/images/back.jpg" alt="backdrop">
-        </div>
-        <div class="face-up">
-            <img class='card-value' src="assets/images/3.jpg" alt="earth">
-        </div>
-    </div>
-    <div class="memory-card" data-name="4">
-        <div class="face-down back-hover">
-            <img src="assets/images/back.jpg" alt="backdrop">
-        </div>
-        <div class="face-up">
-            <img class='card-value' src="assets/images/4.jpg" alt="mars">
-        </div>
-    </div>
-    <div class="memory-card" data-name="5">
-        <div class="face-down back-hover">
-            <img src="assets/images/back.jpg" alt="backdrop">
-        </div>
-        <div class="face-up">
-            <img class='card-value' src="assets/images/5.jpg" alt="jupiter">
-        </div>
-    </div>
-    <div class="memory-card" data-name="6">
-        <div class="face-down back-hover">
-            <img src="assets/images/back.jpg" alt="backdrop">
-        </div>
-        <div class="face-up">
-            <img class='card-value' src="assets/images/6.jpg" alt="saturn">
-        </div>
-    </div>
-    <div class="memory-card" data-name="7">
-        <div class="face-down back-hover">
-            <img src="assets/images/back.jpg" alt="backdrop">
-        </div>
-        <div class="face-up">
-            <img class='card-value' src="assets/images/7.jpg" alt="uranus">
-        </div>
-    </div>
-    <div class="memory-card" data-name="8">
-        <div class="face-down back-hover">
-            <img src="assets/images/back.jpg" alt="backdrop">
-        </div>
-        <div class="face-up">
-            <img class='card-value' src="assets/images/8.jpg" alt="neptune">
-        </div>
-    </div>
-</div>
+</section>
 
 <!-- Footer -->
 
