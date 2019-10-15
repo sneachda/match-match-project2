@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Orbitron:100,200,300,400,500,600,700');
 
 @font-face {
-  font-family: 'Tr2n';
-  src: url('../font/Tr2n.ttf') format('truetype');
+    font-family: 'Tr2n';
+    src: url('../font/Tr2n.ttf') format('truetype');
 }
 
 html {
@@ -23,15 +23,14 @@ body {
 /*----------------------------------------------------General Text */
 
 .page-title {
-    margin-top: 5%;
-	line-height: 65px;
-	padding: 5px 5px 5px 25%;
-	box-shadow:
-		inset 0 0 0 1px rgba(0,20,39, .7),
-		inset 0 0 10px rgba(0,20,39, .7),
-		inset -285px 0 60px #323036;
-	border-radius: 12px;
-	background:  url("../images/9.jpg") no-repeat left;
+    margin-top: 10%;
+    line-height: 65px;
+    padding: 5px 5px 5px 25%;
+    box-shadow: inset 0 0 0 1px rgba(0, 20, 39, .7),
+    inset 0 0 10px rgba(0, 20, 39, .7),
+    inset -285px 0 60px #323036;
+    border-radius: 12px;
+    background: url("../images/9.jpg") no-repeat left;
     justify-content: center;
 }
 
@@ -91,11 +90,11 @@ inspired by https://www.w3schools.com/howto/howto_css_overlay.asp */
 
 @keyframes grow {
     from {
-        background-color: rgba(0,0,0, 0);
+        background-color: rgba(0, 0, 0, 0);
         font-size: 0;
     }
     to {
-        background-color: rgba(0,0,0, .8);
+        background-color: rgba(0, 0, 0, .8);
         font-size: 80px;
     }
 }
@@ -117,7 +116,7 @@ inspired by https://www.w3schools.com/howto/howto_css_overlay.asp */
 
 /*----------------------------------------------------Cards Styling */
 
-.memory-card, img{
+.memory-card, img {
     height: 94px;
     width: 125px;
 }
@@ -170,8 +169,8 @@ I have used it to achieve unique hover effect and changed parameters accordingly
 }
 
 .back-hover img:hover {
-   -webkit-filter: grayscale(0);
-   filter: grayscale(0);
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
 }
 
 /* end of tutorial code */
@@ -179,22 +178,22 @@ I have used it to achieve unique hover effect and changed parameters accordingly
 /*----------------------------------------------------Modal */
 
 .modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .modal-content {
-    background-color: rgba(20,19,21, .8);
-  margin: 10% auto;
-  padding: 10px;
-  border: 1px solid #001427;
+    background-color: rgba(20, 19, 21, .8);
+    margin: 10% auto;
+    padding: 10px;
+    border: 1px solid #001427;
     border-radius: 12px;
-  width: 60%;
+    width: 60%;
 
     color: #ffffff;
     font-family: sans-serif;
@@ -206,37 +205,34 @@ I have used it to achieve unique hover effect and changed parameters accordingly
 }
 
 .close {
-  color: #6D6875;
-  font-size: 20px;
-  font-weight: 500;
+    color: #6D6875;
+    font-size: 20px;
+    font-weight: 500;
     text-align: right;
 }
 
 .close:hover,
 .close:focus {
-  color: #6D6875;
-  text-decoration: none;
-  cursor: pointer;
+    color: #6D6875;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .btn-custom {
-    box-shadow:
-		inset 0 0 0 1px rgba(0,20,39, .7),
-		inset 0 0 1px rgba(0,20,39, .7),
-		inset -80px 0 60px #323036;
-	border-radius: 12px;
+    box-shadow: inset 0 0 0 1px rgba(0, 20, 39, .7),
+    inset 0 0 1px rgba(0, 20, 39, .7),
+    inset -80px 0 60px #323036;
+    border-radius: 12px;
     text-align: center;
-    padding: 10px;
+    padding: 8px;
 }
 
 /*----------------------------------------------------Footer */
 
 .container-footer {
-    position: absolute;
     display: inline-block;
-    width: 100%;
-    height: 120px;
     text-align: center;
+    margin-bottom: 15px;
 }
 
 .social-links-footer li a i {
@@ -271,7 +267,44 @@ I have used it to achieve unique hover effect and changed parameters accordingly
         grid-template-columns: repeat(2, auto);
     }
 
-    .time {
-        padding-right: 0;
+    .page-title {
+        line-height: 45px;
+        box-shadow: inset 0 0 0 1px rgba(0, 20, 39, .7),
+        inset 0 0 10px rgba(0, 20, 39, .7),
+        inset -175px 0 60px #323036;
+    }
+
+    .front-page, h1 {
+        font-size: 40px;
+    }
+
+    .game-info, .btn-custom {
+        font-size: 20px;
+        padding-top: 10px;
+    }
+
+    #time, #flips {
+        font-size: 25px;
+    }
+
+    .memory-card, img {
+        height: 79px;
+        width: 105px;
+    }
+
+    @keyframes grow {
+        from {
+            background-color: rgba(0, 0, 0, 0);
+            font-size: 0;
+        }
+        to {
+            background-color: rgba(0, 0, 0, .8);
+            font-size: 50px;
+        }
+    }
+
+    .front-page-small {
+        font-size: 20px;
     }
 }
+
