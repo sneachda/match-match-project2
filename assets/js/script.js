@@ -29,6 +29,12 @@ let totalClicks = 0;
 let ticker = document.getElementById('flips');
 let countdown;
 
+//variable needed for getting high score
+let highScore;
+
+//as soon as page loads - highScore function is called
+getHighScore();
+
 //event listener added to all three overlays - when clicked game page appears and it starts
 let overlays = Array.from(document.getElementsByClassName('front-page'));
 overlays.forEach(overlay => {
@@ -40,13 +46,18 @@ overlays.forEach(overlay => {
 
 //functions
 
+function getHighScore() {
+    highScore = localStorage.getItem("matchMatchScore");
+    document.getElementById('high-score').innerHTML = highScore;
+}
+
 function restartGame() {
-//restart game function only called when called from overlay pages
+//restart game function only called on overlay pages
 //all parameters are cleared
     shuffle();
     hideCards();
+    getHighScore();
     matchedCards = [];
-    bgMusic.load();
     bgMusic.play();
     totalClicks = 0;
     ticker.innerText = totalClicks;
@@ -62,11 +73,11 @@ function flipCard() {
     if (lockBoard) return;
     if (this === firstCard) return;
 
+    //Every card click, counter increases +1
     totalClicks++;
     ticker.innerText = totalClicks;
 
     this.classList.add('flip');
-    flipSound.load();
     flipSound.play();
 
     if (!flippedCard) {
@@ -78,12 +89,13 @@ function flipCard() {
         flippedCard = false;
         secondCard = this;
 
+        //function checking if cards are the same is called
         checkIfMatch();
     }
 }
 
 function checkIfMatch() {
-    //see if there is a match?
+    //checking if dataset-name of first card flipped is equal to second card
     if (firstCard.dataset.name ===
         secondCard.dataset.name) {
         //match!
@@ -97,39 +109,37 @@ function checkIfMatch() {
 function disabledCards() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
-    matchSound.load();
     matchSound.play();
     matchedCards.push(firstCard);
     matchedCards.push(secondCard);
     //each matched card is sent to matchedCards array
-    if (matchedCards.length === 16)
+    if (matchedCards.length === 16) {
+        if (totalClicks < highScore) {
+        localStorage.setItem("matchMatchScore", totalClicks);
+        }
+        // if the player has flipped cards less times than his previous attempts
+        //high score is updated and stored in localStorage
+        //when all 16 cards are flipped and matched, player has won
         victory();
-    //when all 16 cards are flipped and matched, player has won
+    }
 }
 
 function unflipCards() {
     //not a match
-    lockBoard = true;
+    lockBoard = true; //lock the board until the card is unfliped
     setTimeout(() => {
         firstCard.classList.remove('flip');
         secondCard.classList.remove('flip');
 
-        startGame();
+        startPlay();
         //cards are not matched, startGame function is called
-
     }, 1000);
 }
 
-function startGame() {
+function startPlay() {
+    //reset
     [FlippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
-}
-
-function hideCards() {
-    //hides all cards when restarting the game
-    cards.forEach(card => {
-        card.classList.remove('flip');
-    });
 }
 
 function startClock() {
@@ -143,12 +153,13 @@ function startClock() {
 }
 
 function howFast() {
+    //information how long player took to complete the game
     timeLeft = minute - totalTime;
 }
 
 function gameOver() {
+    //when time runs out gameOver function called
     bgMusic.pause();
-    gameOverSound.load();
     gameOverSound.play();
     clearInterval(countdown);
     document.getElementById('game-over').classList.add('visible');
@@ -158,16 +169,22 @@ function victory() {
     bgMusic.pause();
     howFast();
     clearInterval(countdown);
-    winSound.load();
     winSound.play();
     document.getElementById('victory').classList.add('visible');
-    document.getElementById("finalFlips").innerHTML = totalClicks;
+    document.getElementById('finalFlips').innerHTML = totalClicks;
     document.getElementById('finalTime').innerHTML = timeLeft;
+}
+
+function hideCards() {
+    //hides all cards when restarting the game
+    cards.forEach(card => {
+        card.classList.remove('flip');
+    });
 }
 
 function shuffle() {
 //function called with each reload of the page
-//shuffle the deck into random positions
+//shuffles deck into random positions
     cards.forEach(card => {
         let random = Math.floor(Math.random() * 16);
         card.style.order = random;

@@ -44,18 +44,24 @@ body {
     text-shadow: 1.5px 1.5px 1px #A29EA7;
 }
 
-
 .game-info, .btn-custom {
     color: #001120;
     font-family: Orbitron, sans-serif;
-    font-size: 30px;
     padding-top: 20px;
     letter-spacing: 1px;
     text-shadow: 1.5px 1.5px 1px #A29EA7;
     text-align: center;
 }
 
-#time, #flips {
+.game-info {
+    font-size: 30px;
+}
+
+.btn-custom {
+    font-size: 20px;
+}
+
+#time, #flips, #high-score {
     font-size: 35px;
 }
 
@@ -66,7 +72,7 @@ body {
 }
 
 /*----------------------------------------------------Front Overlay Page
-inspired by https://www.w3schools.com/howto/howto_css_overlay.asp and Web Dev Simplified*/
+inspired by https://www.w3schools.com/howto/howto_css_overlay.asp and Web Dev Simplified */
 
 .front-page {
     display: none;
@@ -110,9 +116,12 @@ One of the Web Dev Simplified tutorials has inspired me to try CSS grid*/
     display: grid;
     grid-template-columns: repeat(4, auto);
     grid-gap: 5px;
-    margin: 50px;
+    margin: 35px;
     justify-content: center;
     perspective: 1000px;
+    -webkit-perspective: 1000px;
+    -o-perspective: 1000px;
+    -moz-perspective: 1000px;
 }
 
 /*----------------------------------------------------Cards Styling */
@@ -133,15 +142,31 @@ img {
     transform: scale(1);
     transition: transform 0.5s;
     transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: -webkit-transform 0.5s;
+    -o-transform-style: preserve-3d;
+    -o-transition: -o-transform 0.5s;
+    -moz-transform-style: preserve-3d;
+    -moz-transition: -moz-transform 0.5s;
 }
 
 .memory-card:active {
     transform: scale(.9);
     transition: transform .2s, ease-in-out;
+    -webkit-transform: scale(0.9);
+    -webkit-transition: -webkit-transform .2s, ease-in-out;
+    -o-transform: scale(.9);
+    -o-transition: -o-transform .2s, ease-in-out;
+    -moz-transform: scale(.9);
+    -moz-transition: -moz-transform .2s, ease-in-out;
 }
 
 .memory-card.flip {
     transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+
 }
 
 .face-up,
@@ -153,25 +178,38 @@ img {
     justify-content: center;
     align-items: center;
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+
 }
 
 .face-up {
     transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
 }
 
 /* the below code was referenced from  https://codepen.io/nxworld/pen/ZYNOBZ
 I have used it to achieve unique hover effect and changed parameters accordingly. */
 
 .back-hover img {
-    -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
-    -webkit-transition: .2s ease-in-out;
     transition: .2s ease-in-out;
+    -webkit-filter: grayscale(100%);
+    -webkit-transition: -webkit-transform .2s ease-in-out;
+    -o-filter: grayscale(100%);
+    -o-transition: -o-transform .2s ease-in-out;
+    -moz-filter: grayscale(100%);
+    -moz-transition: -moz-transform .2s ease-in-out;
 }
 
 .back-hover img:hover {
-    -webkit-filter: grayscale(0);
     filter: grayscale(0);
+    -webkit-filter: grayscale(0);
+    -o-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
 }
 
 /* end of tutorial code */
@@ -194,20 +232,20 @@ I have used it to achieve unique hover effect and changed parameters accordingly
     padding: 10px;
     border: 1px solid #001427;
     border-radius: 12px;
-    width: 60%;
+    width: 50%;
 
     color: #ffffff;
     font-family: sans-serif;
     font-weight: 200;
     text-align: center;
-    font-size: 15px;
+    font-size: 20px;
     letter-spacing: 1px;
     text-shadow: 1.5px 1.5px 1px #A29EA7;
 }
 
 .close {
     color: #6D6875;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 500;
     text-align: right;
 }
@@ -226,6 +264,7 @@ I have used it to achieve unique hover effect and changed parameters accordingly
     border-radius: 12px;
     text-align: center;
     padding: 8px;
+    margin: 15px;
 }
 
 /*----------------------------------------------------Footer */
@@ -263,7 +302,7 @@ I have used it to achieve unique hover effect and changed parameters accordingly
 
 /*----------------------------------------------------Media Queries */
 
-@media (max-width: 600px) {
+@media (max-width: 576px) {
     .game-container {
         grid-template-columns: repeat(2, auto);
     }
@@ -279,12 +318,23 @@ I have used it to achieve unique hover effect and changed parameters accordingly
         font-size: 40px;
     }
 
-    .game-info, .btn-custom {
+    .front-page-small {
         font-size: 20px;
+    }
+
+    .game-info, .btn-custom {
         padding-top: 10px;
     }
 
-    #time, #flips {
+    .game-info {
+        font-size: 20px;
+    }
+
+    .btn-custom {
+        font-size: 15px;
+    }
+
+    #time, #flips, #high-score {
         font-size: 25px;
     }
 
@@ -304,8 +354,8 @@ I have used it to achieve unique hover effect and changed parameters accordingly
         }
     }
 
-    .front-page-small {
-        font-size: 20px;
+    .modal-content {
+        font-size: 15px;
     }
 }
 
