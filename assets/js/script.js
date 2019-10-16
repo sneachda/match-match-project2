@@ -2,9 +2,9 @@
 let bgMusic = new Audio('assets/audio/bgmusic.mp3');
 bgMusic.volume = 0.1;
 bgMusic.loop = true;
-let flipSound = new Audio('assets/audio/flip.wav');
+let flipSound = new Audio('assets/audio/flip.mp3');
 flipSound.volume = 0.3;
-let matchSound = new Audio('Assets/Audio/match.wav');
+let matchSound = new Audio('Assets/Audio/match.mp3');
 matchSound.volume = 0.2;
 let winSound = new Audio('Assets/Audio/win.mp3');
 winSound.volume = 0.2;
@@ -46,6 +46,7 @@ function restartGame() {
     shuffle();
     hideCards();
     matchedCards = [];
+    bgMusic.load();
     bgMusic.play();
     totalClicks = 0;
     ticker.innerText = totalClicks;
@@ -65,6 +66,7 @@ function flipCard() {
     ticker.innerText = totalClicks;
 
     this.classList.add('flip');
+    flipSound.load();
     flipSound.play();
 
     if (!flippedCard) {
@@ -95,6 +97,7 @@ function checkIfMatch() {
 function disabledCards() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
+    matchSound.load();
     matchSound.play();
     matchedCards.push(firstCard);
     matchedCards.push(secondCard);
@@ -144,17 +147,19 @@ function howFast() {
 }
 
 function gameOver() {
+    bgMusic.pause();
+    gameOverSound.load();
     gameOverSound.play();
     clearInterval(countdown);
-    bgMusic.pause();
     document.getElementById('game-over').classList.add('visible');
 }
 
 function victory() {
+    bgMusic.pause();
     howFast();
     clearInterval(countdown);
+    winSound.load();
     winSound.play();
-    bgMusic.pause();
     document.getElementById('victory').classList.add('visible');
     document.getElementById("finalFlips").innerHTML = totalClicks;
     document.getElementById('finalTime').innerHTML = timeLeft;

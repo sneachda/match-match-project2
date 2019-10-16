@@ -66,7 +66,7 @@ body {
 }
 
 /*----------------------------------------------------Front Overlay Page
-inspired by https://www.w3schools.com/howto/howto_css_overlay.asp */
+inspired by https://www.w3schools.com/howto/howto_css_overlay.asp and Web Dev Simplified*/
 
 .front-page {
     display: none;
@@ -103,7 +103,8 @@ inspired by https://www.w3schools.com/howto/howto_css_overlay.asp */
     font-size: 30px;
 }
 
-/*----------------------------------------------------Game Grid Styling */
+/*----------------------------------------------------Game Grid Styling
+One of the Web Dev Simplified tutorials has inspired me to try CSS grid*/
 
 .game-container {
     display: grid;
