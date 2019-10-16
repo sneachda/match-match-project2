@@ -2,9 +2,9 @@
 let bgMusic = new Audio('assets/audio/bgmusic.mp3');
 bgMusic.volume = 0.1;
 bgMusic.loop = true;
-let flipSound = new Audio('assets/audio/flips.mp3');
+let flipSound = new Audio('assets/audio/flip.mp3');
 flipSound.volume = 0.3;
-let matchSound = new Audio('Assets/Audio/matched.mp3');
+let matchSound = new Audio('Assets/Audio/match.mp3');
 matchSound.volume = 0.2;
 let winSound = new Audio('Assets/Audio/win.mp3');
 winSound.volume = 0.2;
