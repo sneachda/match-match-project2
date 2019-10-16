@@ -1,5 +1,5 @@
 //variables declaring different sound sources used throughout game
-let bgMusic = new Audio('assets/audio/bgmusic.mp3');
+/*let bgMusic = new Audio('assets/audio/bgmusic.mp3');
 bgMusic.volume = 0.1;
 bgMusic.loop = true;
 let flipSound = new Audio('assets/audio/flip.mp3');
@@ -10,6 +10,8 @@ let winSound = new Audio('Assets/Audio/win.mp3');
 winSound.volume = 0.2;
 let gameOverSound = new Audio('Assets/Audio/game-over.mp3');
 gameOverSound.volume = 0.2;
+*/
+ */
 
 //different variables declared needed for for game to work
 let cards = Array.from(document.getElementsByClassName('memory-card'));
