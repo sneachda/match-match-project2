@@ -48,11 +48,6 @@ overlays.forEach(overlay => {
 
 //functions
 
-function getHighScore() {
-    highScore = localStorage.getItem("matchMatchScore");
-    document.getElementById('high-score').innerHTML = highScore;
-}
-
 function restartGame() {
 //restart game function only called on overlay pages
 //all parameters are cleared
@@ -117,7 +112,7 @@ function disabledCards() {
     //each matched card is sent to matchedCards array
     if (matchedCards.length === 16) {
         if (totalClicks < highScore) {
-        localStorage.setItem("matchMatchScore", totalClicks);
+            localStorage.setItem("matchMatchScore", totalClicks);
         }
         // if the player has flipped cards less times than his previous attempts
         //high score is updated and stored in localStorage
@@ -175,6 +170,11 @@ function victory() {
     document.getElementById('victory').classList.add('visible');
     document.getElementById('finalFlips').innerHTML = totalClicks;
     document.getElementById('finalTime').innerHTML = timeLeft;
+}
+
+function getHighScore() {
+    highScore = localStorage.getItem("matchMatchScore");
+    document.getElementById('high-score').innerHTML = highScore;
 }
 
 function hideCards() {
