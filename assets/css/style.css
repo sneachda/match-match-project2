@@ -238,7 +238,7 @@ I have used it to achieve unique hover effect and changed parameters accordingly
     font-family: sans-serif;
     font-weight: 200;
     text-align: center;
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 1px;
     text-shadow: 1.5px 1.5px 1px #A29EA7;
 }
@@ -355,6 +355,6 @@ I have used it to achieve unique hover effect and changed parameters accordingly
     }
 
     .modal-content {
-        font-size: 15px;
+        font-size: 14px;
     }
 }
