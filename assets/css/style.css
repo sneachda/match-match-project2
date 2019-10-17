@@ -5,8 +5,8 @@
     src: url('../font/Tr2n.ttf') format('truetype');
 }
 
-html {
-    min-height: 100%;
+body, html {
+    height: 100%;
 }
 
 * {
@@ -153,7 +153,7 @@ img {
 .memory-card:active {
     transform: scale(.9);
     transition: transform .2s, ease-in-out;
-    -webkit-transform: scale(0.9);
+    -webkit-transform: scale(.9);
     -webkit-transition: -webkit-transform .2s, ease-in-out;
     -o-transform: scale(.9);
     -o-transition: -o-transform .2s, ease-in-out;
