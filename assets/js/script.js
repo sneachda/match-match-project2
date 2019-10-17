@@ -1,14 +1,14 @@
 //variables declaring different sound sources used throughout game
-let bgMusic = new Audio('assets/audio/bgmusic.mp3');
+let bgMusic = new Audio('assets/audio/bg-music.mp3');
 bgMusic.volume = 0.1;
 bgMusic.loop = true;
-let flipSound = new Audio('assets/audio/flip.mp3');
+let flipSound = new Audio('assets/audio/card-flip.mp3');
 flipSound.volume = 0.3;
-let matchSound = new Audio('Assets/Audio/match.mp3');
+let matchSound = new Audio('Assets/Audio/match-found.mp3');
 matchSound.volume = 0.2;
-let winSound = new Audio('Assets/Audio/win.mp3');
+let winSound = new Audio('Assets/Audio/victory.mp3');
 winSound.volume = 0.2;
-let gameOverSound = new Audio('Assets/Audio/game-over.mp3');
+let gameOverSound = new Audio('Assets/Audio/game-is-over.mp3');
 gameOverSound.volume = 0.2;
 
 
