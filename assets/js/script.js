@@ -109,10 +109,10 @@ function disabledCards() {
     matchedCards.push(secondCard);
     //each matched card is sent to matchedCards array
     if (matchedCards.length === 16) {
-        if (totalClicks < highScore) {
+        if (!highScore || totalClicks < highScore) {
             localStorage.setItem('matchMatchScore', totalClicks);
         }
-        // if the player has flipped cards less times than his previous attempts
+        //if the player has flipped cards less times than his previous attempts
         //high score is updated and stored in localStorage
         //when all 16 cards are flipped and matched, player has won
         victory();
@@ -170,12 +170,6 @@ function victory() {
     document.getElementById('finalTime').innerHTML = timeLeft;
 }
 
-function getHighScore() {
-    //getting the the high score if has been set
-    highScore = localStorage.getItem("matchMatchScore");
-    document.getElementById('high-score').innerHTML = highScore;
-}
-
 function hideCards() {
     //hides all cards when restarting the game
     cards.forEach(card => {
@@ -190,6 +184,12 @@ function shuffle() {
         let random = Math.floor(Math.random() * 16);
         card.style.order = random;
     });
+}
+
+function getHighScore() {
+    //getting the the high score if has been set
+    highScore = localStorage.getItem('matchMatchScore');
+    document.getElementById('high-score').innerHTML = highScore;
 }
 
 //modal instructions, based on knowledge from w3schools

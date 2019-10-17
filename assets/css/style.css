@@ -192,7 +192,7 @@ img {
 }
 
 /* the below code was referenced from  https://codepen.io/nxworld/pen/ZYNOBZ
-I have used it to achieve unique hover effect and changed parameters accordingly. */
+I have used it to achieve unique hover effect and changed parameters accordingly.*/
 
 .back-hover img {
     filter: grayscale(100%);
