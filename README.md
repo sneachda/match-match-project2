@@ -54,7 +54,7 @@ I created a logo using a picture of the moon blended with one of the colours use
 
 *Overlays*
 
-When page is loaded at first, overlay with 'Click to Start' appears with opaque background.
+When page is loaded at first, overlay with 'Click to Start' appears with transparent background.
 
 Game starts as soon as this is clicked. Overlay disappears, clock starts counting down. 
 
