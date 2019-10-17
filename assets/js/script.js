@@ -4,14 +4,12 @@ bgMusic.volume = 0.1;
 bgMusic.loop = true;
 let flipSound = new Audio('assets/audio/card-flip.mp3');
 flipSound.volume = 0.3;
-let matchSound = new Audio('Assets/Audio/match-found.mp3');
+let matchSound = new Audio('assets/audio/match-found.mp3');
 matchSound.volume = 0.2;
-let winSound = new Audio('Assets/Audio/victory.mp3');
+let winSound = new Audio('assets/audio/victory.mp3');
 winSound.volume = 0.2;
-let gameOverSound = new Audio('Assets/Audio/game-is-over.mp3');
+let gameOverSound = new Audio('assets/audio/game-is-over.mp3');
 gameOverSound.volume = 0.2;
-
-
 
 //different variables declared needed for for game to work
 let cards = Array.from(document.getElementsByClassName('memory-card'));
@@ -112,7 +110,7 @@ function disabledCards() {
     //each matched card is sent to matchedCards array
     if (matchedCards.length === 16) {
         if (totalClicks < highScore) {
-            localStorage.setItem("matchMatchScore", totalClicks);
+            localStorage.setItem('matchMatchScore', totalClicks);
         }
         // if the player has flipped cards less times than his previous attempts
         //high score is updated and stored in localStorage
@@ -173,6 +171,7 @@ function victory() {
 }
 
 function getHighScore() {
+    //getting the the high score if has been set
     highScore = localStorage.getItem("matchMatchScore");
     document.getElementById('high-score').innerHTML = highScore;
 }
@@ -195,26 +194,26 @@ function shuffle() {
 
 //modal instructions, based on knowledge from w3schools
 
-let modal = document.getElementById("myModal");
-let btn = document.getElementById("myBtn");
-let span = document.getElementsByClassName("close")[0];
+let modal = document.getElementById('myModal');
+let btn = document.getElementById('myBtn');
+let span = document.getElementsByClassName('close')[0];
 
 // When the user clicks on the button, open the modal
 btn.onclick = function () {
-    modal.style.display = "block";
+    modal.style.display = 'block';
     clearInterval(countdown);
 };
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function () {
-    modal.style.display = "none";
+    modal.style.display = 'none';
     countdown = setInterval(startClock, 1000);
 };
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
     if (event.target === modal) {
-        modal.style.display = "none";
+        modal.style.display = 'none';
         countdown = setInterval(startClock, 1000);
     }
 };
