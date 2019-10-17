@@ -133,16 +133,18 @@ The code has been validated using:
 [JSHint](https://jshint.com "JSHint")
 
 This site has met the objective of creating online presence with minimalistic design and content. It has been tested and updated as different bugs were found along the way. 
-I really struggled while running this project on Safari. Especially problematic turned to be card flip rotations. I simply forgot to add prefix for all the browsers (webkit, o, moz). After that, game seemed to be working better. There still seems to be an issue with some audio clips ISOs are blocking. After some research I found out: 
+I really struggled running this project on Safari. Especially problematic turned to be card flip rotations. I simply forgot to add prefix for all the browsers (webkit, o, moz). After that, game seemed to be working better. There still seem to be an issue with some audio clips ISOs are blocking. After some research, I found this: 
 > Safari on iOS (for all devices, including iPad), where the user may be on a cellular network and be charged per data unit, preload and auto play are disabled. No data is loaded until the user initiates it. This means the JavaScript play() and load() methods are also inactive until the user initiates playback, unless the play() or load() method is triggered by user action.
 
-As technically game is running well, lack of sound can be unnoticed.
+As technically game is running well, lack of sound can go unnoticed. Link to the game has been sent out to my freinds and family, all seemed to think page is running well and it's fun trying to beat your own score. 
 
 All links included on this website have target=_blank attribute added, which means they will open in a new tab. That permits users to simply get back where they were within my page. All links have been manually tested to make sure they are linked to correct destination.
 
 The website has been tested across multiple browsers (Chrome, Safari, FireFox) and across different screen sizes (Galaxy C5, various iPhones, Huawei, iPad, iPad Pro and laptops) to make sure is responsive. Bootstrap and CCS Grid has been used to achieve this.
 
 All fonts, images and other attributes have been changed accordingly to fit different screen sizes. Media queries have been used to make them work.
+
+
 
 
 ------------
@@ -190,6 +192,7 @@ Audio has been downloaded from open source pages.
 Background music has been purchased from http://bandcamp.com : Tannhauser Gate, digital track by Aleks Michalski
 
 *Code*
+
 Code for flip Card animation and some functionalities like match cards, resettable, flip and unflip cards, disable and shuffle cards was learned, based and adapted from this video on [FreecodeCamp](https://www.youtube.com/watch?v=ZniVgo8U7ek)
 
 *Idea*
