@@ -158,7 +158,7 @@ The site was developed using PyCharm. Using version control in PyCharm I was abl
 
 **Those steps were taking in order to deploy my page from GitHub repository:**
 
-1. On Github navigate to [sneachda/memory-game-ms2](https://github.com/sneachda/memory-game-ms2 "sneachda/memory-game-ms2")
+1. On Github navigate to [sneachda/match-match-project2](https://github.com/sneachda/match-match-project2 "sneachda/match-match-project2")
 2.  From the menu at the top click on settings
 3.  Scroll down to the GitHub pages section
 4. Under Source section click on dropdown menu and select Master Branch as your GitHub pages publishing source.
@@ -166,13 +166,13 @@ The site was developed using PyCharm. Using version control in PyCharm I was abl
 
 **To create a local repository please follow those steps:**
 
-1. Go to [Github Project Repository](https://github.com/sneachda/memory-game-ms2 "Github Project Repository")
+1. Go to [Github Project Repository](https://github.com/sneachda/match-match-project2 "Github Project Repository")
 2. Under the repository name click Clone or download
 3. In the 'Clone with HTTPs section' clone URL for the repository.
 4. Open Git Bash in your local platform.
 5. Change the current working directory to the location where you want the cloned directory to be made.
-6. Type git clone, and then paste the URL copied earlier: git clone https://github.com/sneachda/memory-game-ms2.git
-7. - After pressing ENTER your local clone will be created.
+6. Type git clone, and then paste the URL copied earlier: git clone https://github.com/sneachda/match-match-project2.git
+7. After pressing ENTER your local clone will be created.
 
 
 ------------
