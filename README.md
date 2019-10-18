@@ -103,20 +103,20 @@ The following was used to create the website:
 
 HTML, CSS & JavaScript - main languages used to create this single-page application game.
 
-[PyCharm](http://https://www.jetbrains.com/pycharm/ "PyCharm") - coding platform that was used for the coding and storing a local repository.
+[PyCharm](https://www.jetbrains.com/pycharm/ "PyCharm") - coding platform that was used for the coding and storing a local repository.
 [GitHub](https://github.com/) - this project uses GitHub to store and share all project code remotely. GitHub Pages is used to hosting the project live demo.
 
-[Bootstrap](http://https://www.bootstrapcdn.com/ "Bootstrap") - used to simplify the structure and to make it responsive.
+[Bootstrap](https://www.bootstrapcdn.com/ "Bootstrap") - used to simplify the structure and to make it responsive.
 
-[FontAwesome](http://https://fontawesome.com/ "FontAwesome") - accessed for social media icons.
+[FontAwesome](https://fontawesome.com/ "FontAwesome") - accessed for social media icons.
 
-[jquery](http://https://jquery.com/ "jquery") - used to reference JavaScript modal
+[jquery](https://jquery.com/ "jquery") - used to reference JavaScript modal
 
-[Google Fonts](http://https://fonts.google.com/ "Google Fonts") - used to style the website fonts.
+[Google Fonts](https://fonts.google.com/ "Google Fonts") - used to style the website fonts.
 
 TrueType font - downloaded to create page title.
 
-[Adobe XD](http://https://www.adobe.com/uk/products/xd.html?sdid=88X75SKR&mv=search&ef_id=Cj0KCQjwuZDtBRDvARIsAPXFx3CkjvkCMAGlNMBo5sLiFbGiWlBD_JhHCMMfJRGOsp8QwQMTbKwrj8AaAuOVEALw_wcB:G:s&s_kwcid=AL!3085!3!340667162876!e!!g!!adobe%20xd "Adobe XD") - tool used to create wireframe.
+[Adobe XD](https://www.adobe.com/uk/products/xd.html?sdid=88X75SKR&mv=search&ef_id=Cj0KCQjwuZDtBRDvARIsAPXFx3CkjvkCMAGlNMBo5sLiFbGiWlBD_JhHCMMfJRGOsp8QwQMTbKwrj8AaAuOVEALw_wcB:G:s&s_kwcid=AL!3085!3!340667162876!e!!g!!adobe%20xd "Adobe XD") - tool used to create wireframe.
 
 
 ------------
