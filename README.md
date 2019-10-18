@@ -33,7 +33,7 @@ This project has been designed to be responsive on all platforms most commonly u
 
 *Font and Colour Scheme*
 
-As the total theme of this webpage is space/universe, I decided to opt out for a bit of an unusual fonts that would meet the needs. I found source online which provided me with True Font called **Tr2n**. I also took a font called **Orbitron** from Google Fonts. I believe both of them work well together.
+The theme of this webpage is space/universe. Cards' faces are represented by photos of our solar system (8 planets). I also decided to opt out for a bit of an unusual fonts that would meet the needs. I found source online which provided me with True Font called **Tr2n**. I also took a font called **Orbitron** from Google Fonts. I believe both of them work well together.
 
 Colours also had to match the theme running, so I decided to use darker palette. With the help of [Coolors.co](https://coolors.co/2b061e-d2bf55-ffeed6-fbbfca-6d6875) webpage that generates colours which are well balanced together, I picked greys/blues/and purples.
 
@@ -137,7 +137,7 @@ This site has met the objective of creating online presence with minimalistic de
 I really struggled running this project on Safari. Especially problematic turned to be card flip rotations. I simply forgot to add prefix for all the browsers (webkit, o, moz). After that, game seemed to be working better. I am aware audio is not running perfectly on Safari. After some research, I found this: 
 > Safari on iOS (for all devices), where the user may be on a cellular network and be charged per data unit, preload and auto play are disabled. No data is loaded until the user initiates it. This means the JavaScript play() and load() methods are also inactive until the user initiates playback, unless the play() or load() method is triggered by user action.
 
-As technically game is running well on other browsers, glitch sound can go unnoticed on Safari and I decdided, for now, to let the problem go. Link to the game has been sent out to my freinds and family, all seemed to think page is running well and it's fun trying to beat your own score. 
+As technically game is running well on other browsers, glitch sound can go unnoticed on Safari and I decided, for now, to let the problem go. Link to the game has been sent out to my friends and family, all seemed to think page is running well and it's fun trying to beat your own score. 
 
 All links included on this website have target=_blank attribute added, which means they will open in a new tab. That permits users to simply get back where they were within my page. All links have been manually tested to make sure they are linked to correct destination.
 
