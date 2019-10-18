@@ -104,6 +104,7 @@ The following was used to create the website:
 HTML, CSS & JavaScript - main languages used to create this single-page application game.
 
 [PyCharm](https://www.jetbrains.com/pycharm/ "PyCharm") - coding platform that was used for the coding and storing a local repository.
+
 [GitHub](https://github.com/) - this project uses GitHub to store and share all project code remotely. GitHub Pages is used to hosting the project live demo.
 
 [Bootstrap](https://www.bootstrapcdn.com/ "Bootstrap") - used to simplify the structure and to make it responsive.
