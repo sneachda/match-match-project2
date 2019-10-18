@@ -166,7 +166,6 @@ img {
     -webkit-transform: rotateY(180deg);
     -o-transform: rotateY(180deg);
     -moz-transform: rotateY(180deg);
-
 }
 
 .face-up,
@@ -181,7 +180,6 @@ img {
     -webkit-backface-visibility: hidden;
     -o-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
-
 }
 
 .face-up {
@@ -364,5 +362,3 @@ I have used it to achieve unique hover effect and changed parameters accordingly
         grid-template-columns: repeat(4, auto);
     }
 }
-
-

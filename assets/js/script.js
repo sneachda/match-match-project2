@@ -91,11 +91,9 @@ function flipCard() {
 
 function checkIfMatch() {
     //checking if dataset-name of first card flipped is equal to second card
-    if (firstCard.dataset.name ===
-        secondCard.dataset.name) {
+    if (firstCard.dataset.name === secondCard.dataset.name) {
         //match!
         disabledCards();
-
     } else {
         unflipCards();
     }
