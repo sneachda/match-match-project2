@@ -25,7 +25,7 @@ Give it a go [here](https://sneachda.github.io/match-match-project2/ "here")
 
 **UX**
 
-I had couple of goals in mind while designing this project. Main purpose was to test player's memory skills. There is a pretty generous time given to complete the challenge: 60 seconds. The application also counts clicks/flips of the cards and at the end, if all cards are matched, a screen will inform the player how long it took and how many times cards were flipped. I also used a local storage function to keep track of player's higher scores. 
+I had a couple of goals in mind while designing this project. Main purpose was to test player's memory skills. There is a pretty generous time given to complete this challenge: 60 seconds. The application also counts clicks/flips of the cards and at the end, if all cards are matched, a screen will inform the player how many moves were made and how long it took. I also used a local storage function to keep track of player's higher score. 
 
 *Design*
 
@@ -33,7 +33,7 @@ This project has been designed to be responsive on all platforms most commonly u
 
 *Font and Colour Scheme*
 
-As the total theme of this webpage is space/universe, I decided to opt out for a little bit of an unusual fonts that would meet the needs. I found source online which provided me with True Font called **Tr2n**. I also took a font called **Orbitron** from Google Fonts. I believe both of them work well together.
+As the total theme of this webpage is space/universe, I decided to opt out for a bit of an unusual fonts that would meet the needs. I found source online which provided me with True Font called **Tr2n**. I also took a font called **Orbitron** from Google Fonts. I believe both of them work well together.
 
 Colours also had to match the theme running, so I decided to use darker palette. With the help of [Coolors.co](https://coolors.co/2b061e-d2bf55-ffeed6-fbbfca-6d6875) webpage that generates colours which are well balanced together, I picked greys/blues/and purples.
 
@@ -90,7 +90,7 @@ There is a low music running in the background of the application, with appropri
 In the future I would like to add to this project:
 
 - New functions and menus - I would definitely like to expand the game to make it more challenging to the player. Possibly look into adding different levels.
-- Leader Board - Implement a database so I can create and manage a leader board.
+- Leader Board - implement a database so I can create and manage a leader board.
 
 
 ------------
@@ -98,9 +98,10 @@ In the future I would like to add to this project:
 
 
 **Technology Used**
+
 The following was used to create the website:
 
-HTML, CSS & JavaScript ~ main languages used to create this single-page application game.
+HTML, CSS & JavaScript - main languages used to create this single-page application game.
 
 [PyCharm](http://https://www.jetbrains.com/pycharm/ "PyCharm") - coding platform that was used for the coding and storing a local repository.
 [GitHub](https://github.com/) - this project uses GitHub to store and share all project code remotely. GitHub Pages is used to hosting the project live demo.
@@ -133,14 +134,14 @@ The code has been validated using:
 [JSHint](https://jshint.com "JSHint")
 
 This site has met the objective of creating online presence with minimalistic design and content. It has been tested and updated as different bugs were found along the way. 
-I really struggled running this project on Safari. Especially problematic turned to be card flip rotations. I simply forgot to add prefix for all the browsers (webkit, o, moz). After that, game seemed to be working better. There still seem to be an issue with some audio clips ISOs are blocking. After some research, I found this: 
-> Safari on iOS (for all devices, including iPad), where the user may be on a cellular network and be charged per data unit, preload and auto play are disabled. No data is loaded until the user initiates it. This means the JavaScript play() and load() methods are also inactive until the user initiates playback, unless the play() or load() method is triggered by user action.
+I really struggled running this project on Safari. Especially problematic turned to be card flip rotations. I simply forgot to add prefix for all the browsers (webkit, o, moz). After that, game seemed to be working better. I am aware audio is not running perfectly on Safari. After some research, I found this: 
+> Safari on iOS (for all devices), where the user may be on a cellular network and be charged per data unit, preload and auto play are disabled. No data is loaded until the user initiates it. This means the JavaScript play() and load() methods are also inactive until the user initiates playback, unless the play() or load() method is triggered by user action.
 
-As technically game is running well, lack of sound can go unnoticed. Link to the game has been sent out to my freinds and family, all seemed to think page is running well and it's fun trying to beat your own score. 
+As technically game is running well on other browsers, glitch sound can go unnoticed on Safari and I decdided, for now, to let the problem go. Link to the game has been sent out to my freinds and family, all seemed to think page is running well and it's fun trying to beat your own score. 
 
 All links included on this website have target=_blank attribute added, which means they will open in a new tab. That permits users to simply get back where they were within my page. All links have been manually tested to make sure they are linked to correct destination.
 
-The website has been tested across multiple browsers (Chrome, Safari, FireFox) and across different screen sizes (Galaxy C5, various iPhones, Huawei, iPad, iPad Pro and laptops) to make sure is responsive. Bootstrap and CCS Grid has been used to achieve this.
+The website has been tested across multiple browsers (Chrome, Safari, FireFox) and across different screen sizes (Galaxy C5, various iPhones, Huawei, iPad, and laptops) to make sure is responsive. Bootstrap and CCS Grid has been used to achieve this.
 
 All fonts, images and other attributes have been changed accordingly to fit different screen sizes. Media queries have been used to make them work.
 
